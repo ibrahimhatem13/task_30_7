@@ -133,30 +133,5 @@ echo $_SERVER['REQUEST_METHOD'];
             
     </form>
     
-
-    <?php if(isset($the_name)){ ?>
-
-        <table style="text-align:center; padding:0 5px;">
-            <tr>
-                <th>Student Name</th>
-                <th>ID</th>
-                <th>Classroom</th>
-                <th>Department</th>
-                <th>GPA</th>
-            </tr>
-            <tr>
-                <td><?php echo $the_name ?></td>
-                <td><?php echo $_POST['id']?></td>
-                <td><?php echo $_POST['classroom']?></td>
-                <td><?php echo $_POST['department']?></td>
-                <td><?php echo $_POST['gpa']?></td>
-            </tr>
-            
-        </table>
-
-    <?php } ?>
-
-
-
 </body>
 </html>
