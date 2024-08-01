@@ -1,35 +1,28 @@
-
 <?php
 $the_name=null;
-
 if($_SERVER['REQUEST_METHOD']=="POST"){
     $the_name = $_POST['name'];
     $the_id = $_POST['id'];
     $the_department = $_POST['department'];
     $the_classroom = $_POST['classroom'];
     $the_gpa = $_POST['gpa'];
-    
-    echo "<table >
-            <tr>
+    echo "<table style='width:80%; text-align:center; border-spacing:2px; margin:15px' >
+            <tr style='background-color:#75b798; color:#eee; font-weight:bold; padding:10px;'>
                 <th>Student Name</th>
                 <th>ID</th>
                 <th>Classroom</th>
                 <th>Department</th>
                 <th>GPA</th>
             </tr>
-            <tr>
-                <td> $the_name</td>
+            <tr style='background-color:#eee; color:black; padding:10px;'>
+                <td > $the_name</td>
                 <td> $the_id</td>
-                <td> $the_department</td>
                 <td> $the_classroom</td>
+                <td> $the_department</td>
                 <td> $the_gpa</td>
             </tr>
-            
         </table>";
-    
 }
-
-echo $_SERVER['REQUEST_METHOD'];
 
 ?>
 
@@ -51,7 +44,6 @@ echo $_SERVER['REQUEST_METHOD'];
         padding-left:20px;">
         <h2 style="font-size: 45px; margin-bottom: 10px;font-family:'Gill Sans';">Welcome</h2>
         <label style="width:120px" for="">Student Name</label>
-     
         <input style="height: 40px;
             width: 60%;
             padding: 0 28px;
@@ -62,7 +54,6 @@ echo $_SERVER['REQUEST_METHOD'];
             background-color: initial;"  name="name" class="userName" placeholder="Student Name" type="text">
         <br/>
         <label style="width:120px" for="">ID</label>
-        
         <input 
         style="height: 40px;
             width: 60%;
@@ -101,17 +92,16 @@ echo $_SERVER['REQUEST_METHOD'];
             font-size:18px;
             background-color: initial;" class="department"  name="department" >
             <optgroup label="Select Department">
-
                 <option value="Communication">Communication</option>
                 <option value="Computer">Computer</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Network">Network</option>
-                
+                <option value="Power">Power</option>
+                <option value="Control">Control</option>
             </optgroup>
         </select>
         <br/>
         <label style="width:120px" class="forget">GPA</label>
-       
         <input 
         style="height: 40px;
             width: 60%;
@@ -129,9 +119,7 @@ echo $_SERVER['REQUEST_METHOD'];
             border: 1px #6c14d0 solid;
             margin: 5px 122px;
             font-size:18px;
-            background-color: initial;" type="submit">
-            
+            background-color: initial;" type="submit">    
     </form>
-    
 </body>
 </html>
